@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//E30) Faça um programa que leia uma string com até 1000 símbolos e apresente o tamanho da string. Não deverá fazer uso da função strlen.
 int main(){
     char str[100];
     int i = 0;
