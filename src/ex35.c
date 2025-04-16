@@ -13,7 +13,7 @@ void remover_quebra_linha(char str[]) {
 
 int tamanho_string (char str[]) {
     int tam = 0;
-    while (str[tam] != '\0') {  
+    while (str[tam] != '\0' && str[tam] != '\n') { 
         tam++;
     }
     return tam;
@@ -49,10 +49,6 @@ int procurar_string(char str1[], char str2[]) {
     return -1;
 }
 
-int encontrar_posicao(char str1[], char str2[]) {
-    return procurar_string(str1, str2);
-}
-
 int main() {
     char str1[100];
     char str2[100];
@@ -63,7 +59,7 @@ int main() {
     remover_quebra_linha(str1);
     remover_quebra_linha(str2);
  
-    int pos = encontrar_posicao(str1, str2);
+    int pos = procurar_string(str1, str2);
 
     printf("%d\n", pos);
 
