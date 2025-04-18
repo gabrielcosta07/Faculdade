@@ -9,7 +9,11 @@ int i,j;
 
 fgets(str,sizeof(str),stdin);
 
-while (str[tamanho] != '\0' && str[tamanho]!= '\n'){
+while (str[tamanho] != '\0') {
+    if (str[tamanho] == '\n') {
+        str[tamanho] = '\0';
+        break;
+    }
     tamanho++;
 }
 
