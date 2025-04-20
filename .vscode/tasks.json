@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
             "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
+            "type": "shell",
+            "command": "mkdir -p ${workspaceFolder}/bin && C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -23,6 +23,14 @@
                 "isDefault": true
             },
             "detail": "Compila o arquivo C atual"
+        },
+        {
+            "label": "Executar arquivo compilado",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            "dependsOn": "C/C++: gcc.exe build active file",
+            "group": "test",
+            "problemMatcher": []
         }
     ]
 }
