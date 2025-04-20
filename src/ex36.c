@@ -5,15 +5,13 @@ int main (){
     char str[100];
     int tamanho,i;
     
-    gets(str);
-    
-        while (str[tamanho] != '\0' && str[tamanho] != '\n'){
-        tamanho++;
-        }
-    
-        for (i = tamanho -1; i >= 0;i--){
-            printf("%c",str[i]);
-        }
+    scanf("%s",str);
+
+    for (tamanho = 0; str[tamanho] != '\0';tamanho++);
+        
+    for (i = tamanho -1; i >= 0;i--){
+        printf("%c",str[i]);
+    }
         printf("\n");
         
         return 0;

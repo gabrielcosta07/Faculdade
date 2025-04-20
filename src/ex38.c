@@ -7,15 +7,9 @@ char str[100];
 int tamanho = 0;
 int i,j;
 
-fgets(str,sizeof(str),stdin);
+scanf("%s",str);
 
-while (str[tamanho] != '\0') {
-    if (str[tamanho] == '\n') {
-        str[tamanho] = '\0';
-        break;
-    }
-    tamanho++;
-}
+for (tamanho = 0; str[tamanho] != '\0';tamanho++);
 
 for (i = 1; i <= tamanho;i++){
     for (j = 0; j < i;j++){
