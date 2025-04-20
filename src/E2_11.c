@@ -12,8 +12,7 @@ int main (){
 
     for (i = 0; i < 10;i++){
         if (lista[i] % 2 == 0){
-            num = i;
-            printf("%d\n",num);
+            printf("%d\n",lista[i]);
         }
     }
     return 0;
