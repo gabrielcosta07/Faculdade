@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+// Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, leia um número e procure esse número no vetor. E apresente o índice de todas as ocorrências localizadas, caso contrário -1.
 int main(){
 
     int lista[10];
